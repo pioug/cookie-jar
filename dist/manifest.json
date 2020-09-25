@@ -1,0 +1,18 @@
+{
+  "name": "Cookie Jar",
+  "version": "0.1.0",
+  "description": "Erase all browsing data except data useful for your bookmarks.",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Options"
+  },
+  "icons": {
+    "128": "icon256.png"
+  },
+  "options_page": "options.html",
+  "permissions": ["*://*/*", "bookmarks", "browsingData"]
+}
