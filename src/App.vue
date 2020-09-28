@@ -7,6 +7,9 @@
     CLEAR ALL BROWSING DATA <br />
     <small><strong>EXCEPT DATA USEFUL FOR MY BOOKMARKS</strong></small>
   </button>
+  <p v-if="timestamp === 0">
+    ⏳ Clearing cache...
+  </p>
   <p v-if="timestamp">
     ✅ Cache cleared <small>({{ timestamp }})</small>
   </p>
@@ -23,6 +26,7 @@ export default {
     };
 
     function clear() {
+      timestamp.value = 0;
       chrome.runtime.sendMessage({ command: "clear" }, function () {
         chrome.runtime.onMessage.addListener(displayResult);
       });
