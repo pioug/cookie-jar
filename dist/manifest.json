@@ -1,6 +1,6 @@
 {
   "name": "Cookie Jar",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Erase all browsing data except data useful for your bookmarks.",
   "manifest_version": 2,
   "background": {
