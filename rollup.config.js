@@ -1,10 +1,9 @@
 import alias from "@rollup/plugin-alias";
 import commonjs from "@rollup/plugin-commonjs";
-import css from "rollup-plugin-css-only";
 import pluginVue from "rollup-plugin-vue";
 import replace from "@rollup/plugin-replace";
+import terser from "@rollup/plugin-terser";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
-import { terser } from "rollup-plugin-terser";
 
 export default {
   input: "src/main.js",
@@ -14,7 +13,6 @@ export default {
     chunkFileNames: "[name].js",
   },
   plugins: [
-    css({ output: "dist/bundle.css" }),
     replace({
       "process.env.NODE_ENV": JSON.stringify("production"),
     }),
