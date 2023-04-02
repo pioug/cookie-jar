@@ -1,11 +1,10 @@
 <template>
   <h1>Cookie Jar Extension</h1>
   <p>
-    Clear your cache via this extension to avoid being signed out from sites you've bookmarked.
+    Clear your cache without losing access to bookmarked sites.
   </p>
   <button @click="clear()">
-    CLEAR ALL BROWSING DATA <br />
-    <small><strong>EXCEPT DATA USEFUL FOR MY BOOKMARKS</strong></small>
+    CLEAR
   </button>
   <p v-if="timestamp === 0">
     ⏳ Clearing cache...
