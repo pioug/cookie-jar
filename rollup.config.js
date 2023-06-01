@@ -1,6 +1,5 @@
 import alias from "@rollup/plugin-alias";
-import commonjs from "@rollup/plugin-commonjs";
-import pluginVue from "rollup-plugin-vue";
+import pluginVue from '@vitejs/plugin-vue'
 import replace from "@rollup/plugin-replace";
 import terser from "@rollup/plugin-terser";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
@@ -21,7 +20,6 @@ export default {
     }),
     pluginVue(),
     nodeResolve(),
-    commonjs(),
     terser(),
   ],
   preserveEntrySignatures: false,
