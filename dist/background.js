@@ -10,17 +10,15 @@ chrome.browserAction.onClicked.addListener(() => {
   chrome.tabs.create({ url: "options.html" });
 });
 
-chrome.runtime.onMessage.addListener(async function (
-  request,
-  sender,
-  sendResponse
-) {
-  if (request.command == "clear") {
-    sendResponse({ result: "clearing" });
-    await clear();
-    chrome.runtime.sendMessage({ result: "cleared" });
-  }
-});
+chrome.runtime.onMessage.addListener(
+  async function (request, sender, sendResponse) {
+    if (request.command == "clear") {
+      sendResponse({ result: "clearing" });
+      await clear();
+      chrome.runtime.sendMessage({ result: "cleared" });
+    }
+  },
+);
 
 async function clearBrowsingDataFromSpecificOrigins(excludedOrigins) {
   return new Promise(function (resolve) {
@@ -38,7 +36,7 @@ async function clearBrowsingDataFromSpecificOrigins(excludedOrigins) {
         serviceWorkers: true,
         webSQL: true,
       },
-      resolve
+      resolve,
     );
   });
 }
@@ -56,7 +54,7 @@ async function clearGeneralBrowsingData() {
         passwords: true,
         webSQL: true,
       },
-      resolve
+      resolve,
     );
   });
 }

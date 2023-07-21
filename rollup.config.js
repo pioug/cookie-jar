@@ -1,5 +1,5 @@
 import alias from "@rollup/plugin-alias";
-import pluginVue from '@vitejs/plugin-vue'
+import pluginVue from "@vitejs/plugin-vue";
 import replace from "@rollup/plugin-replace";
 import terser from "@rollup/plugin-terser";
 import { nodeResolve } from "@rollup/plugin-node-resolve";

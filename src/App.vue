@@ -1,14 +1,8 @@
 <template>
   <h1>Cookie Jar Extension</h1>
-  <p>
-    Clear your cache without losing access to bookmarked sites.
-  </p>
-  <button @click="clear()">
-    CLEAR
-  </button>
-  <p v-if="timestamp === 0">
-    ⏳ Clearing cache...
-  </p>
+  <p>Clear your cache without losing access to bookmarked sites.</p>
+  <button @click="clear()">CLEAR</button>
+  <p v-if="timestamp === 0">⏳ Clearing cache...</p>
   <p v-if="timestamp">
     ✅ Cache cleared <small>({{ timestamp }})</small>
   </p>
