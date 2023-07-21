@@ -6,5 +6,3 @@ const app = createApp({
 });
 
 app.mount(document.body.querySelector("#root"));
-
-chrome.runtime.sendMessage({ message: "hello" });
