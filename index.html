@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cookie Jar extension</title>
+		<style>
+			:root {
+				font-family: system-ui;
+				font-size: 16px;
+			}
+
+			* {
+				box-sizing: border-box;
+				margin: 0;
+			}
+
+			body {
+				background: linear-gradient(
+					110deg,
+					rgba(248, 196, 249, 0.6) 22%,
+					rgba(253, 122, 4, 0.2) 64%
+				);
+				color: #233142;
+				display: flex;
+				flex-direction: column;
+				min-height: 100dvh;
+				padding-inline: 12px;
+			}
+
+			header,
+			main,
+			section,
+			nav,
+			footer {
+				margin-inline: auto;
+				max-width: 500px;
+				padding-block: 16px;
+			}
+
+			header {
+				text-align: center;
+			}
+
+			img {
+				display: flex;
+				height: auto;
+				max-width: 100%;
+			}
+
+			footer {
+				display: flex;
+				flex-direction: column;
+				font-size: 14px;
+				gap: 16px;
+				text-align: center;
+			}
+
+			a {
+				color: inherit;
+				font-family: monospace;
+			}
+
+			.install {
+				align-items: center;
+				background: #fafafa;
+				box-shadow:
+					inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
+					0 0 0 1px hsla(0, 0%, 0%, 0.05),
+					0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+					0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+					0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+				border-radius: 4px;
+				color: #5254d8;
+				display: flex;
+				gap: 16px;
+				padding: 12px 16px;
+				text-decoration: none;
+			}
+
+			.install:hover {
+				background: #e1eeff;
+			}
+
+			h1 {
+				font-size: 32px;
+				font-weight: bold;
+				margin-bottom: 16px;
+			}
+
+			h2 {
+				font-size: 18px;
+				font-weight: bolder;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Cookie Jar</h1>
+			<h2>Stop signing in everywhere after clearing your browser history.</h2>
+		</header>
+		<main>
+			<p>
+				<em>Cookie Jar</em> is a Chrome extension that clears your browser cache
+				but keeps the data useful for your existing bookmarks.
+			</p>
+		</main>
+		<section>
+			<img src="preview.avif" width="2324" height="1534" />
+		</section>
+		<section>
+			<a
+				class="install"
+				href="https://chromewebstore.google.com/detail/cookie-jar/kkiiipjojjiecidkhgagdkppinddcigl"
+				target="_blank"
+				><img src="chrome.svg" width="32" height="28" /><span
+					>Install Chrome Extension</span
+				>
+			</a>
+		</section>
+		<footer>
+			<a href="https://github.com/pioug/cookie-jar">GitHub repository</a>
+			<a href="https://piou.io/">piou.io</a>
+		</footer>
+	</body>
+</html>
